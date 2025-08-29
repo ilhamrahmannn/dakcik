@@ -1,0 +1,490 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 5%;
+  transition: background 0.2s linear;
+  background-color: rgb(255, 246, 239)!important;
+  overflow: scroll;
+  
+}
+
+.container {
+  width: 90%;
+  padding: auto;
+  max-width: none;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  position: relative;
+  animation: fadeIn 4s ease-in-out; /* Adjust duration and easing as needed */
+}
+
+/* Define keyframes for the animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(10px); /* Move the elements slightly down */
+  }
+  100% {
+    opacity: 1; /* End with full opacity */
+    transform: translateY(0); /* Return to the original position */
+  }
+}
+
+.frame {
+  position: absolute;
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  height: auto; /* Allow the image to maintain its aspect ratio */
+  top: 2%;
+  left: 5%;
+  right: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+  border-radius: 2%;
+}
+
+.word1,
+.word2,
+.word3,
+.word4 {
+  position: absolute;
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  height: auto; /* Allow the image to maintain its aspect ratio */
+  top: 2%;
+  left: 5%;
+  right: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.13);
+  border-radius: 2%;
+  animation: slideIn 4s ease-in-out; /* Adjust duration and easing as needed */
+  animation-fill-mode: both;
+}
+
+span {
+  color: #896f5b;
+  display: inline-block;
+  font-family: "Gabarito", cursive;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flex {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 2%;
+  padding-top: 10px;
+  padding-bottom: px;
+  display: flex;
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 0%;
+  animation: fadeIn 4s ease-in-out;
+  animation-fill-mode: both;
+  opacity: 0;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.13);
+  border-radius: 10%;
+  background-color: #ffffff;
+}
+.flex.active {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.tab a {
+  text-decoration: none;
+  color: #896f5b;
+  margin-left: 1%;
+  display: inline-block;
+  font-family: "Gabarito", cursive;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.tab img {
+  text-align: center;
+  justify-content: center;
+}
+#navbar {
+  position:fixed;
+  bottom: 0;
+  z-index: 20;
+
+}
+
+div.main button  {
+  font-size: 16px;
+  color: #eee;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: #896f5b;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  cursor: pointer;
+  animation: fadeIn 4s ease-in-out;;
+  transition:  all 2s ease-out;
+  z-index: 3;
+}
+
+button.fade:hover {
+  opacity: 0.8;
+}
+
+.fade {
+  opacity: 0.2;
+  top: 62%;
+  right: 2%;
+  transform: translate(0, 0);
+}
+
+.img3,
+.img4,
+.img5,
+.img6 {
+
+  z-index: 11;
+}
+.img7 {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 1%;
+  height: 300px; /* or any size you want */
+  z-index: 40;
+}
+
+.word5 {
+position: relative;
+  width: 60%; /* Ensure the image takes up the full width of the container */
+  height: auto; /* Allow the image to maintain its aspect ratio */
+  top: 55%;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  animation: slideIn 4s ease-in-out; /* Adjust duration and easing as needed */
+  animation-fill-mode: both;
+
+}
+
+
+
+.slider {
+  position: relative;
+  margin-bottom: 3%;
+  width: 90px;
+  height: 45px;
+  background-color: #ccc;
+  overflow: hidden;
+  border-radius: 20px;
+  justify-content: space-between;
+  left: 40%;
+  animation: fadeIn 4s ease-in-out;
+  
+}
+
+.icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 20px;
+}
+
+.icon.active {
+  display: flex;
+  
+}
+
+#icon1 {
+  background-color: #c4bfeef5;
+  color: #fff;
+  left: 50%;
+  
+}
+
+#icon2 {
+  background-color: #ebe0e0ec;
+  left: 1%;
+  animation: moveRightToLeft 0.8s linear;
+  
+}
+
+.slider-button {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #2c3e50;
+  cursor: pointer;
+  z-index: 1;
+  border-radius:20px ;
+  
+}
+
+div.slider-button .boy{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #c4bfeef5;
+  color: #fff;
+  left: 100%;
+  border-radius: 20px;
+}
+
+#sliderButton {
+  left: 0;
+  transition: left 0.5s ease-in-out;
+  
+}
+
+.boy {
+  width: 40%;
+}
+
+.girl {
+  width: 40%;
+  
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    left: 105%; /* Start at the right edge of the container */
+  }
+  102% {
+    left: 0; /* Move to the left edge of the container */
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+  cursor: pointer;
+  
+  
+}
+
+.dropdown:hover .dropdown-content {      
+  max-height: 300px;
+  visibility: visible;
+  bottom: 100%;
+}
+
+.dropdown-content {
+  
+  position: absolute;
+  background-color: #ebe0e0ec;
+  min-width: 145px;
+  margin-bottom: 5%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10%;
+  z-index: 100;
+  
+
+  
+}
+span{
+  color: #896f5b;
+}
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  text-decoration: none;
+  display: block;
+  color: #896f5b;
+  font-family: "Gabarito", cursive;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Raleway", sans-serif;
+  z-index: 100;
+  
+}
+a:hover  {
+  display: block;
+  background-color: #e0dad68a;
+  transition: .5s;
+  border-radius: 10%;
+  
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: all 0.4s linear;
+}
+
+.poll-container {
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 85%; /* Increase or decrease as needed to adjust the width of the poll container */
+  border: 1px solid #000; /* Add a border to the poll container */
+  padding: 2%; /* Optional: Add padding inside the border */
+  text-align: center;
+}
+
+.results {
+  width: 70%;
+  font-weight: bold;
+  display: block;
+}
+
+.input-form {
+  width: 70%;
+  margin-bottom: 3%;
+ 
+  
+}
+
+.input-form input {
+flex: 0 0.5 1%;
+}
+
+
+footer {
+  
+  color: #896f5b; 
+  text-align: center;
+  align-items: center;
+  padding: 10px 0;
+  position:fixed;
+  bottom: 0%;
+  margin: 10% 40% 12%;
+  animation: fadeIn 4s ease-in-out;
+  font-size: 8px;
+  z-index: -10;
+}
+
+.form {
+  font-family: 'Raleway';
+  height: auto;
+  width: 60%;
+  background-color: #fff;
+  margin: 5% auto ;
+  border-radius: 10px;
+  color: #666;
+  padding: 0px 0px 2%;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+  animation: fadeIn 4s ease-in-out;
+  z-index: -20;
+}
+
+
+.info {
+  padding: 10px;
+}
+
+h1, h2, p {
+  text-align: center;
+  padding: 0px;
+  margin: 5px 5px;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 100;
+}
+
+p.line {
+  margin: 0px auto 5% auto;
+  color: #999;
+}
+button .accept .regret {
+  display: inline-block;
+  width: 400px;
+}
+form input .accept {
+  color: #666;
+  background-color: #ffbdc7;
+  border: none;
+  font-family: 'Raleway';
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 32px;
+  width: 40%;
+  margin: 4% 5% 5% 5%; 
+  float:left;
+}
+
+form input{
+  font-size: 15px;
+  color: #666;
+  padding: 6px;
+  margin: 2% auto 2%;
+  display: block;
+  width: 50%; 
+}
+
+input.accept {
+  border-radius: 0px 0px 0px 10px;
+  background-color: #cc919a;
+  color: #f3e3d7;
+  width: 30%;
+}
+
+
+input.accept:hover {
+  background-color: #cc919a;
+  transition: .5s;
+}
+input.regret:hover {
+  background-color: #cc919a;
+  transition: .5s;
+}
+
+input:focus {
+  outline: 0;
+}
+.form textarea{
+  font-size: 15px;
+  color: #666;
+  padding: 6px;
+  margin: 2% auto 2%;
+  display: block;
+  width: 50%; 
+ 
+}
+
+.pos {
+  position: relative;
+  margin-top: 150%;
+  
+}
